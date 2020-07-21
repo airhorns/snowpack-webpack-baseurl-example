@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -6,6 +6,7 @@ interface AppProps {}
 
 function App({}: AppProps) {
   return (
+    <Suspense fallback={"Loading..."}>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -22,6 +23,7 @@ function App({}: AppProps) {
         </a>
       </header>
     </div>
+    </Suspense>
   );
 }
 
